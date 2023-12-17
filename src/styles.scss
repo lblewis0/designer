@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter.ttf') format('truetype');
+}
+
+:host {
+    $primary-color-2: #39ace7;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 500;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+*{
+    font-family: inherit;
+}
