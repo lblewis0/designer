@@ -1,0 +1,559 @@
+@import '../../../shared/styles/colors.scss';
+
+.c-main-div
+{
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    background-color: $secondary-dark-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.top-div
+{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top-left-div
+{
+    width: 50%;
+    height: 100%;
+    background-color: $primary-dark-color;
+    border-radius: 0.5rem;
+}
+
+.top-right-div
+{
+    width: 50%;
+    height: 100%;
+    background-color: $primary-dark-color;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-div
+{
+    height: 30%;
+    width: 100%;
+    background-color: $primary-dark-color;
+    border-radius: 0.5rem;
+}
+
+.editor-header
+{
+    height: 2.125rem;
+    width: 100%;
+    border-bottom: 1px solid $secondary-dark-color;
+}
+
+.editor-content
+{
+    flex-grow: 1;
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+}
+
+.editor-footer
+{
+    height: 2.125rem;
+    width: 100%;
+    border-top: 1px solid $secondary-dark-color;
+}
+
+.editor
+{
+    height: calc(100% - 0.75rem);
+    width: 100%;
+    background-color: $secondary-dark-color;
+    border-radius: 0.375rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor-line
+{
+    height: 2rem;
+    width: 100%;
+    background-color: $primary-dark-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $font-default-dark-color;
+}
+
+.editor-line-n
+{
+    width: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.3rem;
+    border-right: 1px solid red;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: calc(100% - 0.4rem);
+}
+
+.editor-line-content
+{
+    height: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    padding-left: 0.5rem;
+}
+
+.editor-line-arrow
+{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor-line-add
+{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $success-font-dark-color;
+    background-color: $success-background-dark-color;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+.editor-line-add:hover
+{
+    background-color: darken($success-background-dark-color, 2%);
+}
+
+.editor-line-add:active
+{
+    background-color: darken($success-background-dark-color, 4%);
+}
+
+.editor-line-add-icon
+{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: $success-font-dark-color;
+}
+
+.editor-line-arrow-icon
+{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: $font-default-dark-color;
+}
+
+.editor-line-indent-1
+{
+    height: 1.5rem;
+    width: 0rem;
+    // border: 1px solid blue;
+}
+
+.editor-line-indent-2
+{
+    height: 1.5rem;
+    width: 2rem;
+    // border: 1px solid blue;
+}
+
+.editor-line-name
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-type
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px solid $info-font-dark-color;
+    color: $info-font-dark-color;
+    background-color: $info-background-dark-color;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-id
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px solid $warning-font-dark-color;
+    color: $warning-font-dark-color;
+    background-color: $warning-background-dark-color;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-class
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px solid $success-font-dark-color;
+    color: $success-font-dark-color;
+    background-color: $success-background-dark-color;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-name-undefined
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px dashed rgba($primary-color, 0.5);
+    color: rgba($primary-color, 0.5);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-type-undefined
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px dashed rgba($info-font-dark-color, 0.5);
+    color: rgba($info-font-dark-color, 0.5);
+    background-color: rgab($info-background-dark-color, 0.5);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-id-undefined
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px dashed rgba($warning-font-dark-color, 0.4);
+    color: rgba($warning-font-dark-color, 0.4);
+    background-color: rgba($warning-background-dark-color, 0.4);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-line-class-undefined
+{
+    width: fit-content;
+    border-radius: 0.375rem;
+    border: 1px dashed rgba($success-font-dark-color, 0.4);
+    color: rgba($success-font-dark-color, 0.4);
+    background-color: rgba($success-background-dark-color, 0.4);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.editor-sibling-line
+{
+    height: 2rem;
+    width: 100%;
+    background-color: $primary-dark-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $font-default-dark-color;
+}
+
+.editor-child-line
+{
+    height: 2rem;
+    width: 100%;
+    background-color: $primary-dark-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $font-default-dark-color;
+}
+
+.editor-line-properties
+{
+    height: 20rem;
+    width: 100%;
+    background-color: lighten($primary-dark-color, 2%);
+}
+
+.editor-line-properties-identification
+{
+    height: fit-content;
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid $secondary-dark-color;
+}
+
+.identification-header
+{
+    height: fit-content;
+    width: calc(100% - 1rem);
+    background-color: lighten($primary-dark-color, 4%);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+}
+
+.identification-content
+{
+    width: calc(100% - 1rem);
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.identification-content-left-div
+{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $secondary-dark-color;
+}
+
+.identification-prop-first
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+    border-bottom: 1px solid $secondary-dark-color;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+.identification-prop
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+    border-bottom: 1px solid $secondary-dark-color;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+.identification-prop-last
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+.identification-content-right-div
+{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.identification-value-first
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: 1px solid $secondary-dark-color;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+.identification-value
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: 1px solid $secondary-dark-color;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+.identification-value-last
+{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: calc(100% - 1rem);
+    height: fit-content;
+}
+
+#primary-01
+{
+    color: $primary-color;
+}
+
+#info-01
+{
+    color: $info-font-dark-color;
+}
+
+#warning-01
+{
+    color: $warning-font-dark-color;
+}
+
+#success-01
+{
+    color: $success-font-dark-color;
+}
+
+.editor-line-properties-attributes
+{
+    height: fit-content;
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid $secondary-dark-color;
+}
+
+.attributes-header
+{
+    height: fit-content;
+    width: calc(100% - 1rem);
+    background-color: lighten($primary-dark-color, 4%);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+}
+
+.attributes-content
+{
+    width: 100%;
+    height: 3rem;
+}
+
+.editor-line-properties-styles
+{
+    height: fit-content;
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid $secondary-dark-color;
+}
+
+.styles-header
+{
+    height: fit-content;
+    width: calc(100% - 1rem);
+    background-color: lighten($primary-dark-color, 4%);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-default-dark-color;
+}
+
+.styles-content
+{
+    width: 100%;
+    height: 3rem;
+}

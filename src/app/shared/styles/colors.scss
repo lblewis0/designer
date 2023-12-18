@@ -1,2 +1,36 @@
-$primary-black: #121212;
-$primary-color: #39ace7;
+//PRIMARY LIGHT THEME
+$dark-color: #121212;
+$light-color: white;
+// $primary-color: #39ace7;
+$primary-color: #6366f1;
+$primary-light-color: mix($light-color, $primary-color, 92%);
+$font-default-light-color: mix($dark-color, $primary-color, 60%);
+$font-hover-light-color: mix($dark-color, $primary-color, 70%);
+$font-active-light-color: mix($dark-color, $primary-color, 80%);
+$font-selected-light-color: mix($dark-color, $primary-color, 0%);
+$font-disabled-light-color: mix($dark-color, $primary-color, 50%);
+$info-font-light-color: rgb(5,152,195);
+$info-background-light-color: mix($info-font-light-color, $primary-light-color, 20%);
+$success-font-light-color: rgb(5,201,119);
+$success-background-light-color: mix($success-font-light-color, $primary-light-color, 20%);
+$warning-font-light-color: rgb(243,137,9);
+$warning-background-light-color: mix($warning-font-light-color, $primary-light-color, 20%);
+$error-font-light-color: rgb(230,76,72);
+$error-background-light-color: mix($error-font-light-color, $primary-light-color, 20%);
+
+//PRIMARY DARK THEME
+$primary-dark-color: mix($dark-color, $primary-color, 92%);
+$secondary-dark-color: lighten($primary-dark-color, 10%);
+$font-default-dark-color: mix($light-color, $primary-color, 60%);
+$font-hover-dark-color: mix($light-color, $primary-color, 70%);
+$font-active-dark-color: mix($light-color, $primary-color, 80%);
+$font-selected-dark-color: mix($light-color, $primary-color, 0%);
+$font-disabled-dark-color: mix($light-color, $primary-color, 50%);
+$info-font-dark-color: rgb(5,152,195);
+$info-background-dark-color: mix($info-font-dark-color, $primary-dark-color, 20%);
+$success-font-dark-color: rgb(5,201,119);
+$success-background-dark-color: mix($success-font-dark-color, $primary-dark-color, 20%);
+$warning-font-dark-color: rgb(243,137,9);
+$warning-background-dark-color: mix($warning-font-dark-color, $primary-dark-color, 20%);
+$error-font-dark-color: rgb(230,76,72);
+$error-background-dark-color: mix($error-font-dark-color, $primary-dark-color, 20%);
