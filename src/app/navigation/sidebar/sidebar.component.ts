@@ -28,6 +28,11 @@ export class SidebarComponent {
       route: '/settings',
       selected: false
     },
+    {
+      route: '/test',
+      selected: false
+    },
+
 
   ]
 

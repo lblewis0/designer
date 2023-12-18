@@ -1,0 +1,40 @@
+@import '../../../../shared/styles/colors.scss';
+
+.editor-line
+{
+    height: fit-content;
+    width: 50rem;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+app-main-line
+{
+    height: fit-content;
+    width: 100%;
+}
+
+.editor-properties
+{
+    height: 30rem;
+    width: 100%;
+    background-color: red;
+}
+
+.editor-add-line-siblings
+{
+    height: 2rem;
+    width: 100%;
+    background-color: blue;
+}
+
+.editor-add-line-childs
+{
+    height: 2rem;
+    width: 100%;
+    background-color: blueviolet;
+}
+

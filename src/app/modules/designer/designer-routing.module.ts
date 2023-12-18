@@ -5,6 +5,7 @@ import { ComponentsComponent } from './components/components.component';
 import { ColorsComponent } from './colors/colors.component';
 import { AccountComponent } from './account/account.component';
 import { SettingsComponent } from './settings/settings.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path: "home", component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "colors", component:ColorsComponent},
   {path: "account", component:AccountComponent},
   {path: "settings", component:SettingsComponent},
+  {path: "test", component:TestComponent}
 
 ];
 

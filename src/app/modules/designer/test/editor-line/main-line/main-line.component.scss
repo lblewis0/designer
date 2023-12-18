@@ -1,0 +1,151 @@
+@import '../../../../../shared/styles/colors.scss';
+
+.main-line
+{
+    height: 2rem;
+    width: 100%;
+    background-color: magenta;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-line-leading-div
+{
+    height: 2rem;
+    width: 2rem;
+    background-color: orange;
+}
+
+.main-line-content-div
+{
+    height: 2rem;
+    flex-grow: 1;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-line-content-remove-icon-div
+{
+    height: 2rem;
+    width: 2rem;
+    background-color: lightcoral;
+
+}
+
+.main-line-content-arrow-icon-div
+{
+    height: 2rem;
+    width: 2rem;
+    background-color: lightgreen;
+}
+
+.main-line-content-content-div
+{
+    height: 2rem;
+    flex-grow: 1;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.2rem;
+}
+
+.main-line-component-name-input-default
+{
+    height: 1.5rem;
+    border: 1px dashed $info-font-dark-color;
+    background-color: lighten($info-background-dark-color, 4%);
+    color: $info-font-dark-color;
+    outline: none;
+    border-radius: 0.375rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    width: 0.9rem;
+}
+
+.main-line-component-name-input-default-focus
+{
+    box-sizing: content-box;
+    height: 1.5rem;
+    border: 1px dashed $info-font-dark-color;
+    background-color: lighten($info-background-dark-color, 4%);
+    color: $info-font-dark-color;
+    outline: none;
+    border-radius: 0.375rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    width: fit-content;
+}
+
+.main-line-component-name-input-value
+{
+    height: 1.5rem;
+    border: 1px solid $info-font-dark-color;
+    background-color: $info-background-dark-color;
+    color: $info-font-dark-color;
+    outline: none;
+    border-radius: 0.375rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    width: 0.9rem;
+}
+
+.main-line-component-name-input-value-focus
+{
+    box-sizing: content-box;
+    height: 1.5rem;
+    border: 1px solid $info-font-dark-color;
+    background-color: $info-background-dark-color;
+    color: $info-font-dark-color;
+    outline: none;
+    border-radius: 0.375rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    width: fit-content;
+}
+
+.main-line-component-name-input-blur
+{
+    height: 1.5rem;
+    border: 1px dashed $info-font-dark-color;
+    background-color: lighten($info-background-dark-color, 4%);
+    color: $info-font-dark-color;
+    outline: none;
+    border-radius: 0.375rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    width: 20rem;
+}
+
+.main-line-component-name-input::placeholder
+{
+    color: $info-font-dark-color;
+}
+
+// .main-line-type
+// {
+    
+// }
+
+// .main-line-name
+// {
+    
+// }
+
+// .main-line-classes-div
+// {
+
+// }
+
+.main-line-trailing-div
+{
+    height: 2rem;
+    width: 15rem;
+    background-color: yellow;
+}

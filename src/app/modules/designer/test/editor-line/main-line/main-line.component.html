@@ -1,0 +1,24 @@
+<div class="main-line">
+    <div class="main-line-leading-div"></div>
+    <div class="main-line-content-div">
+        <div class="main-line-content-remove-icon-div"></div>
+        <div class="main-line-content-arrow-icon-div"></div>
+        <div class="main-line-content-content-div">
+            <input #inputComponentName
+                   [(ngModel)]="inputComponentNameValue"
+                   [ngClass]="getComponentClass()" 
+                   type="text" 
+                   (focus)="inputComponentFocus(0)" 
+                   (blur)="inputComponentBlur()"
+                   (change)="getComponentChange()"/>
+            <!-- <div class="main-line-type">div</div>
+            <div class="main-line-id">id</div>
+            <div class="main-line-classes-div">
+                <div class="main-line-class">class 1</div>
+                <div class="main-line-class">class 2</div>
+                <div class="main-line-class">class 3</div>
+            </div> -->
+        </div>
+    </div>
+    <div class="main-line-trailing-div"></div>
+</div>
