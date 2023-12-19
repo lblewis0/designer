@@ -31,13 +31,28 @@ export class MainLineComponent implements OnInit{
     inputValue: 'div',
   }
 
+  inputIdName: string = '';
+  idName: any = {
+    isFocus: false,
+    isDefault: true,
+    inReduceMode: false,
+    value: '',
+    defaultValue: 'id0001',
+    inputValue: 'id0001',
+  }
+
   constructor() {
   }
 
   ngOnInit() {
     this.onComponentNameInit();
     this.onDivNameInit();
+    this.onIdNameInit();
   }
+
+
+
+
 
   onComponentNameInit()
   {
@@ -151,6 +166,11 @@ export class MainLineComponent implements OnInit{
     }
   }
 
+
+
+
+
+
   onDivNameInit()
   {
     if(!this.divName.inReduceMode)
@@ -240,6 +260,122 @@ export class MainLineComponent implements OnInit{
         }
     }
   }
+
+
+  onIdNameInit()
+  {
+    if(!this.idName.inReduceMode)
+    {
+      this.inputIdName = this.idName.inputValue;
+    }
+  }
+
+  onIdNameFocus()
+  {
+    this.inputIdName = this.idName.inputValue;
+    this.idName.isFocus = true;
+    // console.log('focus');
+    // console.log(this.componentName);
+  }
+
+  onIdNameBlur()
+  {
+    //Supprimer la valeur de l'input après blur si on est en reduce mode
+    if(this.idName.inReduceMode)
+    {
+      this.inputIdName = '';
+    }
+    else
+    {
+      if(this.inputIdName === '')
+      {
+        this.inputIdName = this.idName.inputValue;
+      }
+    }
+
+    //Set isFocus = false
+    this.idName.isFocus = false;
+
+    // console.log('blur');
+    // console.log(this.componentName);
+
+  }
+
+  onIdNameInput()
+  {
+    // console.log('input');
+    //Valeurs par défaut de l'input
+    if(this.inputIdName === '')
+    {
+      this.idName.inputValue = this.idName.defaultValue;
+      this.idName.isDefault = true;
+      // console.log('null');
+    }
+
+    if(this.inputIdName === this.idName.defaultValue)
+    {
+      this.idName.inputValue = this.idName.defaultValue;
+      this.idName.isDefault = true;
+      // console.log('default');
+    }
+
+    //Changements de valeurs de l'input
+    if(this.inputIdName !== this.idName.value 
+       && this.inputIdName !== this.idName.defaultValue
+       && this.inputIdName !== '')
+    {
+      this.idName.value = this.inputIdName;
+      this.idName.inputValue = this.idName.value;
+      this.idName.isDefault = false;
+      // console.log('value');
+    }
+
+    // console.log(this.componentName);
+  }
+
+  idNameClass() : string
+  {
+    if(this.idName.isFocus)
+    {
+      if(this.idName.isDefault)
+      {
+        return 'input-name-default'
+      }
+      else
+      {
+        return 'input-name-value'
+      }
+    }
+    else
+    {
+      if(this.idName.isDefault)
+      {
+        if(this.idName.inReduceMode)
+        {
+          return 'input-name-default-reduce'
+        }
+        else
+        {
+          return 'input-name-default'
+        }
+      }
+      else
+      {
+        if(this.idName.inReduceMode)
+        {
+          return 'input-name-value-reduce'
+        }
+        else
+        {
+          return 'input-name-value'
+        }
+      }
+    }
+  }
+
+
+
+
 
 
   onExpandArrowClick() : void

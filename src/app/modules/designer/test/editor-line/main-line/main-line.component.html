@@ -54,6 +54,15 @@
                    (blur)="onDivNameBlur()"
                    (input)="onDivNameInput()"
                    [extraWidth]="-13"/>
+
+            <input type="text" 
+                   [ngClass]="idNameClass()"
+                   autoSizeInput
+                   [(ngModel)]="inputIdName"
+                   (focus)="onIdNameFocus()"
+                   (blur)="onIdNameBlur()"
+                   (input)="onIdNameInput()"
+                   [extraWidth]="-13"/>
         </div>
     </div>
     <div class="main-line-trailing-div"></div>
