@@ -226,31 +226,11 @@ export class MainLineComponent implements OnInit{
   {
     if(this.divName.isFocus)
     {
-      if(this.divName.isDefault)
-      {
-        return 'input-name-default'
-      }
-      else
-      {
-        return 'input-name-value'
-      }
+      return 'input-name-value'
     }
     else
     {
-      if(this.divName.isDefault)
-      {
-        if(this.divName.inReduceMode)
-        {
-          return 'input-name-default-reduce'
-        }
-        else
-        {
-          return 'input-name-default'
-        }
-      }
-      else
-      {
-        if(this.divName.inReduceMode)
+      if(this.divName.inReduceMode)
         {
           return 'input-name-value-reduce'
         }
@@ -258,7 +238,6 @@ export class MainLineComponent implements OnInit{
         {
           return 'input-name-value'
         }
-      }
     }
   }
 
