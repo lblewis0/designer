@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AutoSizeInputModule } from 'ngx-autosize-input';
 
 import { DesignerRoutingModule } from './designer-routing.module';
 import { ColorsComponent } from './colors/colors.component';
@@ -31,7 +32,8 @@ import { AddChildsComponent } from './test/editor-line/add-childs/add-childs.com
   imports: [
     CommonModule,
     FormsModule,
-    DesignerRoutingModule
+    DesignerRoutingModule,
+    AutoSizeInputModule
   ]
 })
 export class DesignerModule { }
