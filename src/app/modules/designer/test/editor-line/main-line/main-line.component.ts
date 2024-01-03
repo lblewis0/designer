@@ -41,6 +41,17 @@ export class MainLineComponent implements OnInit{
     inputValue: 'id0001',
   }
 
+  inputClassName: string = '';
+  className: any = {
+    isFocus: false,
+    isDefault: true,
+    inReduceMode: false,
+    values: [],
+    value: '',
+    defaultValue: 'class0001',
+    inputValue: 'class0001',
+  }
+
   constructor() {
   }
 
@@ -48,6 +59,7 @@ export class MainLineComponent implements OnInit{
     this.onComponentNameInit();
     this.onDivNameInit();
     this.onIdNameInit();
+    this.onClassNameInit();
   }
 
 
@@ -262,6 +274,9 @@ export class MainLineComponent implements OnInit{
   }
 
 
+
+
+
   onIdNameInit()
   {
     if(!this.idName.inReduceMode)
@@ -374,6 +389,124 @@ export class MainLineComponent implements OnInit{
   }
 
 
+
+
+
+  onClassNameInit()
+  {
+    if(!this.className.inReduceMode)
+    {
+      this.inputClassName = this.className.inputValue;
+    }
+  }
+
+  onClassNameFocus()
+  {
+    this.inputClassName = this.className.inputValue;
+    this.className.isFocus = true;
+    // console.log('focus');
+    // console.log(this.componentName);
+  }
+
+  onClassNameBlur()
+  {
+    //Supprimer la valeur de l'input après blur si on est en reduce mode
+    if(this.className.inReduceMode)
+    {
+      this.inputClassName = '';
+    }
+    else
+    {
+      if(this.inputClassName === '')
+      {
+        this.inputClassName = this.className.inputValue;
+      }
+    }
+
+    //Set isFocus = false
+    this.className.isFocus = false;
+
+    // console.log('blur');
+    // console.log(this.componentName);
+
+  }
+
+  onClassNameKeyDown()
+  {
+
+  }
+
+  onClassNameInput()
+  {
+    // console.log('input');
+    //Valeurs par défaut de l'input
+    if(this.inputClassName === '')
+    {
+      this.className.inputValue = this.className.defaultValue;
+      this.className.isDefault = true;
+      // console.log('null');
+    }
+
+    if(this.inputClassName === this.className.defaultValue)
+    {
+      this.className.inputValue = this.className.defaultValue;
+      this.className.isDefault = true;
+      // console.log('default');
+    }
+
+    //Changements de valeurs de l'input
+    if(this.inputClassName !== this.className.value 
+       && this.inputClassName !== this.className.defaultValue
+       && this.inputClassName !== '')
+    {
+      this.className.value = this.inputClassName;
+      this.className.inputValue = this.className.value;
+      this.className.isDefault = false;
+      // console.log('value');
+    }
+
+    // console.log(this.componentName);
+  }
+
+  classNameClass() : string
+  {
+    if(this.className.isFocus)
+    {
+      if(this.className.isDefault)
+      {
+        return 'input-name-default'
+      }
+      else
+      {
+        return 'input-name-value'
+      }
+    }
+    else
+    {
+      if(this.className.isDefault)
+      {
+        if(this.className.inReduceMode)
+        {
+          return 'input-name-default-reduce'
+        }
+        else
+        {
+          return 'input-name-default'
+        }
+      }
+      else
+      {
+        if(this.className.inReduceMode)
+        {
+          return 'input-name-value-reduce'
+        }
+        else
+        {
+          return 'input-name-value'
+        }
+      }
+    }
+  }
 
 
 
